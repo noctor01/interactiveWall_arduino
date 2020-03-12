@@ -1,6 +1,4 @@
 #include <Wire.h>
-
-
 #define TCAADDR 0x70
 
 void TCA_select(uint8_t i) {
@@ -50,12 +48,10 @@ void loop() {
         Serial.println(address, HEX);
       }
     }
-
   }
   if (nDevices == 0)Serial.println("No I2C devices found\n");
   else {
     Serial.println("done\n");
   }
-
   delay(5000);           // wait 5 seconds for next scan
 }
