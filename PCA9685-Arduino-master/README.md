@@ -10,23 +10,6 @@ Created by Kasper Skårhøj, August 3rd, 2012.
 Forked by Vitska, June 18th, 2016.  
 Forked by NachtRaveVL, July 29th, 2016.
 
-## Library Setup
-
-
-```Arduino
-// Uncomment this define to enable use of the software i2c library (min 4MHz+ processor required).
-//#define PCA9685_ENABLE_SOFTWARE_I2C     1   // http://playground.arduino.cc/Main/SoftwareI2CLibrary
-
-// Uncomment this define if wanting to exclude extended functionality from compilation.
-//#define PCA9685_EXCLUDE_EXT_FUNC        1
-
-// Uncomment this define if wanting to exclude ServoEvaluator assistant from compilation.
-//#define PCA9685_EXCLUDE_SERVO_EVAL      1
-
-// Uncomment this define to enable debug output.
-//#define PCA9685_ENABLE_DEBUG_OUTPUT     1
-```
-
 ## Servo Control Note
 
 Many 180 degree controlled digital servos run on a 20ms pulse width (50Hz update frequency) based duty cycle, and do not utilize the entire pulse width for their -90/+90 degree control. Typically, 2.5% of the 20ms pulse width (0.5ms) is considered -90 degrees, and 12.5% of the 20ms pulse width (2.5ms) is considered +90 degrees. This roughly translates to raw PCA9685 PWM values of 102 and 512 (out of the 4096 value range) for -90 to +90 degree control, but may need to be adjusted to fit your specific servo (e.g. some I've tested run ~130 to ~525 for their -90/+90 degree control). Also be aware that driving some servos past their -90/+90 degrees of movement can cause a little plastic limiter pin to break off and get stuck inside of the gearing, which could potentially cause the servo to become jammed. See the PCA9685_ServoEvaluator class to assist with calculating PWM values from Servo angle values.
