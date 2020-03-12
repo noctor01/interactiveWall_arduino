@@ -1,6 +1,3 @@
-# PCA9685-Arduino
-Arduino Library for the PCA9685 16-Channel PWM Driver Module.
-
 **PCA9685-Arduino - Version 1.0.0**
 
 Library to control a PCA9685 16-channel PWM driver module from an Arduino board.  
@@ -10,10 +7,11 @@ Created by Kasper Skårhøj, August 3rd, 2012.
 Forked by Vitska, June 18th, 2016.  
 Forked by NachtRaveVL, July 29th, 2016.
 
-I only revised the example for myself
+
+I used this library to do some experiment and uploaded it to my github page that just only revised the examples for myself.
+I very appreciate Kasper Skårhøj for sharing this that helping me to finish many many expermient, and now if you have questions about the examples, just feel free and contact me. thanks all!
 ## Library Setup
 
-There are several defines inside of the library's header file that allows for more fine-tuned control.
 
 ```Arduino
 // Uncomment this define to enable use of the software i2c library (min 4MHz+ processor required).
