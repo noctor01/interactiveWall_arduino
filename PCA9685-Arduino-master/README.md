@@ -41,7 +41,7 @@ void scanner() {
     if (error == 0) {
       Serial.print("I2C device found at address ");
       if (address < 16) Serial.print("0");
-      Serial.println(address - 64);
+      Serial.println(address - 64);           //PCA9685的預設起始地址為0x40，表示64，因此減去64代表為第0張板子
     }
   }
   delay(1000);
