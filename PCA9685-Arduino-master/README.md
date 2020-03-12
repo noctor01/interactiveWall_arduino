@@ -1,4 +1,4 @@
-**PCA9685-Arduino - Version 1.0.0**
+# PCA9685-Arduino - Version 1.0.0**
 
 Library to control a PCA9685 16-channel PWM driver module from an Arduino board.  
 Licensed under the copy-left GNU GPL v3 license.
