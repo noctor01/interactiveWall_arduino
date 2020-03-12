@@ -12,7 +12,6 @@ void TCA_select(uint8_t i) {
 void setup() {
   Wire.begin();
   Serial.begin(115200);
-
 }
 
 
