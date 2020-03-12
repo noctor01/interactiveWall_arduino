@@ -307,6 +307,7 @@ void loop() {
     BOARD.setChannelPWM(x, angleB);
     delay(200);
   }
+  delay(3000);
 }
 
 ```
