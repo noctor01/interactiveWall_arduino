@@ -8,8 +8,12 @@ Forked by Vitska, June 18th, 2016.
 Forked by NachtRaveVL, July 29th, 2016.
 
 ## Servo Control Note
-
-Many 180 degree controlled digital servos run on a 20ms pulse width (50Hz update frequency) based duty cycle, and do not utilize the entire pulse width for their -90/+90 degree control. Typically, 2.5% of the 20ms pulse width (0.5ms) is considered -90 degrees, and 12.5% of the 20ms pulse width (2.5ms) is considered +90 degrees. This roughly translates to raw PCA9685 PWM values of 102 and 512 (out of the 4096 value range) for -90 to +90 degree control, but may need to be adjusted to fit your specific servo (e.g. some I've tested run ~130 to ~525 for their -90/+90 degree control). Also be aware that driving some servos past their -90/+90 degrees of movement can cause a little plastic limiter pin to break off and get stuck inside of the gearing, which could potentially cause the servo to become jammed. See the PCA9685_ServoEvaluator class to assist with calculating PWM values from Servo angle values.
+許多180度受控的數字伺服器以20ms脈衝寬度（更新頻率為50Hz）的佔空比運行，並且沒有將整個脈衝寬度用於其0至180度控制。 通常，將20ms脈衝寬度（0.5ms）的2.5％視為0度，將20ms脈衝寬度（2.5ms）的12.5％視為180度。 對於0至180度的控制。
+PCA9685的PWM解析度為12bit，也就是4096級，換算成以上對定的2.5%以及12.5%則為
+4096 * 2.5% = 102 表示0度
+4096 * 12.5% = 512 表示180度
+這大致可轉換為102和512的原始PCA9685 PWM值，但可能需要進行調整以適合您的特定舵機（我也試過一些是90 ~ 450的，各種都有）。 
+另請注意，某些舵機超過它們的0或180度運動可能會導致塑料限位器銷折斷卡住，也就是導致堵轉，此有可能會損壞舵機，每一品牌的舵機的電位器、內部IC皆不同，因此再請利用servo_initSerial這個範例來尋找你舵機相對空佔比所對應的角度。
 
 ## Example Usage
 
@@ -142,4 +146,4 @@ void loop() {
 }
 
 ```
-:
+
