@@ -1,5 +1,7 @@
-# PCA9685-Arduino - Version 1.0.0
+# InteractiveWall - Version 1.0.0
+此Library用於紀錄互動牆之所有關知識與代碼，包含Arduino代碼、Processing代碼、Rhino3D檔、電路板、心得、舵機接線等，由於資料太多需要一一整理上來，陸續會隨時更新。
 
+## retrieved from PCA9685-Arduino-master. Author: NachtRaveVL
 I used this library to do some experiment and uploaded it to my github page that just only added some examples for myself.
 i'm very appreciate Kasper Skårhøj for sharing this code that helping me to finish many expermient, and now if you have any questions about the examples, just feel free and contact me. thanks all!
 
