@@ -20,7 +20,7 @@ PCA9685的PWM解析度為12bit，也就是4096級，換算成以上對定的2.5%
 Below are several examples of library usage.
 
 ### I2C_scanner
-將線路安裝好後，可透過以下代碼測試I2C地址，用於確認是否有將線路安裝妥當
+將線路安裝好後，可透過利用I2C的ACK機制，測試該I2C地址是否有設備，用於確認是否有將線路安裝妥當
 ```Arduino
 #include <Wire.h>
 void setup() {
